@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// ANSI Color Codes
 #define RESET   "\033[0m"
 #define RED     "\033[1;31m"
 #define GREEN   "\033[1;32m"
@@ -21,14 +20,13 @@ int main() {
     float professionalTax = 200;
     float totalEarnings, totalDeductions, netSalary;
 
-    // App Header
+   
     printf(CYAN);
     printf("\n==============================================");
     printf("\n     EMPLOYEE SALARY SLIP GENERATOR APP");
     printf("\n==============================================\n");
     printf(RESET);
 
-    // Input Section
     printf(YELLOW "Enter Employee ID        : " RESET);
     scanf("%d", &empId);
 
@@ -47,7 +45,7 @@ int main() {
     printf(YELLOW "Enter Basic Salary (₹)   : " RESET);
     scanf("%f", &basicSalary);
 
-    // Salary Calculations
+
     hra = basicSalary * 0.20;
     da  = basicSalary * 0.10;
     pf  = basicSalary * 0.12;
@@ -56,7 +54,6 @@ int main() {
     totalDeductions = pf + professionalTax;
     netSalary = totalEarnings - totalDeductions;
 
-    // Salary Slip Output
     printf(GREEN);
     printf("\n==============================================");
     printf("\n             SALARY SLIP");
